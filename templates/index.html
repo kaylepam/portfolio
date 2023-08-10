@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MainPage</title>
-    <script src="index.js"></script>
+    <title>내 웹사이트</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    우선 만들어보는 메인페이지입니다.   
-    반갑습니다. 
-    <p id='hi'>안녕하세요 ㅎㅎ</p>
-    <input id='hello' type='button' value='눌러주세용' onclick="document.getElementById('hi').innerText='이거정말바뀜?'">
+    <nav>
+        <button onclick="smoothScroll('#whoami')">Who am I?</button>
+        <button onclick="smoothScroll('#studying')">What am I studying?</button>
+        <button onclick="smoothScroll('#experience')">What experiences do I have?</button>
+    </nav>
+    <div class="content">
+        <section id="whoami">
+            <img src="path/to/your/image.jpg" alt="내 사진">
+            <p>무슨 소개를 넣을까</p>
+        </section>
+        <section id="studying">
+            <div class="study-image"></div>
+            <div class="study-image"></div>
+            <div class="study-image"></div>
+            <div class="study-image"></div>
+            <div class="study-image"></div>
+            <div class="study-image"></div>
+        </section>
+        <section id="experience">
+            <p>플젝경험</p>
+        </section>
+    </div>
 </body>
 </html>
