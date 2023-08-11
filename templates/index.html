@@ -8,17 +8,21 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav>
-        <button onclick="smoothScroll('#whoami')">Who am I?</button>
-        <button onclick="smoothScroll('#studying')">What am I studying?</button>
-        <button onclick="smoothScroll('#experience')">What experiences do I have?</button>
+    <nav id="navbar">
+        <button data-scroll-target="#whoami">Who am I?</button>
+        <button data-scroll-target="#studying">What am I studying?</button>
+        <button data-scroll-target="#experience">What experiences do I have?</button>
     </nav>
+    <section id="whoami" class="full-screen">
+        <div class="fade-in-text">Who am I?</div>
+        <div class="white-box">
+            <img src="path/to/your/image.jpg" alt="내 사진" class="profile-image">
+            <p>내소개</p>
+        </div>
+    </section>
+
     <div class="content">
-        <section id="whoami">
-            <img src="path/to/your/image.jpg" alt="내 사진">
-            <p>무슨 소개를 넣을까</p>
-        </section>
-        <section id="studying">
+        <section id="studying" class="study-section">
             <div class="study-image"></div>
             <div class="study-image"></div>
             <div class="study-image"></div>
@@ -26,8 +30,8 @@
             <div class="study-image"></div>
             <div class="study-image"></div>
         </section>
-        <section id="experience">
-            <p>플젝경험</p>
+        <section id="experience" class="experience-section">
+            <p>경험</p>
         </section>
     </div>
 </body>
