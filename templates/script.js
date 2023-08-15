@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         slider.scrollLeft += velocity;
-        velocity *= 0.95;  // friction
+        velocity *= 0.95;
         animationFrame = requestAnimationFrame(animateScrolling);
     }
 
@@ -62,8 +62,4 @@ document.addEventListener('DOMContentLoaded', function() {
         slider.scrollLeft = scrollLeft - walk;
     });
 
-    slider.addEventListener('wheel', function(e) {
-        e.preventDefault();
-        slider.scrollLeft += e.deltaY;
-    });
 });
